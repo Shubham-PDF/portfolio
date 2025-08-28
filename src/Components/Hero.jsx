@@ -33,7 +33,7 @@ const Hero = () => {
             </div>
 
             {/* Justified Paragraph */}
-            <p className="text-lg text-gray-600 leading-relaxed max-w-xl text-justify">
+            <p className="text-lg text-gray-600 leading-relaxed max-w-xl ">
               I create beautiful, functional web experiences that blend
               thoughtful design with clean code. Passionate about crafting
               digital solutions that make a difference.
@@ -56,13 +56,17 @@ const Hero = () => {
               </button>
 
               {/* Resume Download Button */}
-              <a
-                href="/resume.pdf" // put resume.pdf in public/ folder
-                download
-                className="px-6 py-3 text-lg rounded-lg border-2 border-blue-600 text-blue-600 font-medium hover:bg-blue-50 transition "
+                <button
+                onClick={() => {
+                  const link = document.createElement("a");
+                  link.href = "/resume.pdf"; // resume.pdf in public/ folder
+                  link.download = "resume.pdf";
+                  link.click();
+                }}
+                className="px-6 py-3 text-lg rounded-lg border-2 border-blue-600 text-blue-600 font-medium hover:bg-blue-50 transition-colors duration-300"
               >
                 Resume
-              </a>
+              </button>
 
             </div>
           </div>
