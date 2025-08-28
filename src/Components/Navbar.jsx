@@ -23,8 +23,8 @@ const Navbar = () => {
     { label: "Home", id: "hero" },
     { label: "About", id: "about" },
     { label: "Skills", id: "skills" },
-    { label: "Projects", id: "projects" },
     { label: "Achievements", id: "achievements" },
+    { label: "Projects", id: "projects" },
     { label: "Contact", id: "contact" },
   ];
 
@@ -36,12 +36,12 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Name */}
           <button
             onClick={() => scrollToSection("hero")}
-            className="text-xl font-bold text-black hover:opacity-70 transition"
+            className="text-2xl font-bold text-black hover:opacity-70 transition"
           >
             Portfolio
           </button>

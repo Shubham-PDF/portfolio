@@ -7,8 +7,8 @@ const Contact = () => {
         </svg>
       ),
       label: "Email",
-      value: "alex.johnson@email.com",
-      href: "mailto:alex.johnson@email.com"
+      value: "trickyshubham@gmail.com",
+      href: "mailto:trickyshubham@gmail.com"
     },
     {
       icon: (
@@ -17,8 +17,8 @@ const Contact = () => {
         </svg>
       ),
       label: "Phone",
-      value: "+91 98765 43210",
-      href: "tel:+919876543210"
+      value: "+91 6284-513121",
+      href: "tel:+916284513121"
     },
     {
       icon: (
@@ -28,7 +28,7 @@ const Contact = () => {
         </svg>
       ),
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Chandigarh, India",
       href: "#"
     },
     {
@@ -38,8 +38,8 @@ const Contact = () => {
         </svg>
       ),
       label: "LinkedIn",
-      value: "linkedin.com/in/alexjohnson",
-      href: "https://linkedin.com/in/alexjohnson"
+      value: "linkedin.com/in/trickyshubham",
+      href: "https://linkedin.com/in/trickyshubham"
     },
     {
       icon: (
@@ -48,8 +48,8 @@ const Contact = () => {
         </svg>
       ),
       label: "GitHub",
-      value: "github.com/alexjohnson",
-      href: "https://github.com/alexjohnson"
+      value: "github.com/Shubham-PDF",
+      href: "https://github.com/Shubham-PDF"
     }
   ];
 

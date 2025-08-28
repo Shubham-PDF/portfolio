@@ -3,65 +3,44 @@ import React from "react";
 const Achievements = () => {
   const achievements = [
     {
-      year: "2024",
-      title: "Senior Full-Stack Developer",
-      organization: "TechCorp Inc.",
-      description:
-        "Led a team of 5 developers in building a microservices architecture that increased system performance by 40%.",
-      type: "career",
-    },
-    {
-      year: "2023",
-      title: "AWS Solutions Architect Certified",
-      organization: "Amazon Web Services",
-      description:
-        "Achieved professional certification in cloud architecture and scalable system design.",
+      year: "2022",
+      title: "Computer Architecture & Organisation",
+      organization: "NPTEL",
+      description: "Achieved Elite Certification in Computer Architecture & Organisation.",
       type: "certification",
     },
-    {
-      year: "2023",
-      title: "Open Source Contributor",
-      organization: "React Community",
-      description:
-        "Active contributor to popular React libraries with over 1,000+ stars on GitHub repositories.",
-      type: "achievement",
-    },
-    {
-      year: "2022",
-      title: "Innovation Award Winner",
-      organization: "StartupWeek SF",
-      description:
-        "Won first place for developing an AI-powered accessibility tool that helps visually impaired users navigate websites.",
-      type: "award",
-    },
-    {
-      year: "2022",
-      title: "Google UX Design Certificate",
-      organization: "Google Career Certificates",
-      description:
-        "Completed comprehensive program covering user research, wireframing, prototyping, and usability testing.",
-      type: "certification",
-    },
-    {
-      year: "2021",
-      title: "Tech Mentor",
-      organization: "Code for Good",
-      description:
-        "Mentored 20+ junior developers through career transitions and technical skill development.",
-      type: "achievement",
-    },
-    {
-      year: "2020",
-      title: "Full-Stack Web Developer",
-      organization: "Digital Agency Pro",
-      description:
-        "Built and deployed 15+ client websites, improving average load times by 60% through optimization techniques.",
-      type: "career",
-    },
-  ];
+  {
+    year: "2023",
+    title: "Winner - MCM Meraki Hackathon",
+    organization: "MCM DAV Women College, Chandigarh",
+    description: "Secured 1st place by building an innovative solution during the hackathon.",
+    type: "hackathon",
+  },
+  {
+    year: "2023",
+    title: "Cloud Computing",
+    organization: "NPTEL",
+    description: "Recognized as Silver Medalist in Cloud Computing.",
+    type: "certification",
+  },
+  {
+    year: "2024",
+    title: "Internet of Things",
+    organization: "NPTEL",
+    description: "Secured Silver Medal in Internet of Things certification course.",
+    type: "certification",
+  },
+  {
+    year: "2025",
+    title: "Runner-up - Hack-O-Mania",
+    organization: "NMIMS College, Chandigarh",
+    description: "Awarded 2nd place for developing a creative web-based project in limited time.",
+    type: "hackathon",
+  },
+];
 
-  const getIcon = (type) => {
-    switch (type) {
+const getIcon = (type) => {
+  switch (type) {
       case "career":
         return (
           <svg
@@ -223,12 +202,11 @@ const Achievements = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
+        {/* <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            { number: "50+", label: "Projects Completed" },
-            { number: "5+", label: "Years Experience" },
-            { number: "30+", label: "Happy Clients" },
-            { number: "10+", label: "Certifications" },
+            { number: "10+", label: "Projects Completed" },
+            { number: "3+", label: "Years Experience" },
+            { number: "8+", label: "Certifications" },
           ].map((stat, index) => (
             <div
               key={stat.label}
@@ -240,7 +218,7 @@ const Achievements = () => {
               <div className="text-sm text-gray-600">{stat.label}</div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

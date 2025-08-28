@@ -1,42 +1,81 @@
 import React from "react";
+import { CheckCircle2 } from "lucide-react";
 
 const Skills = () => {
+  const accentColors = {
+    blue: "bg-blue-500 text-blue-500",
+    green: "bg-green-500 text-green-500",
+    purple: "bg-purple-500 text-purple-500",
+    red: "bg-red-500 text-red-500",
+    yellow: "bg-yellow-500 text-yellow-500",
+  };
+
   const skillCategories = [
     {
-      title: "Frontend",
+      title: "Languages",
+      accent: "blue",
       skills: [
-        { name: "React", level: 95 },
-        { name: "JavaScript", level: 90 },
-        { name: "Next.js", level: 85 },
-        { name: "Tailwind CSS", level: 95 },
-        { name: "Framer Motion", level: 80 },
+        { name: "C", note: "Core programming" },
+        { name: "C++", note: "OOP & STL" },
+        { name: "Java", note: "Backend + DSA" },
+        { name: "Python", note: "Scripting + ML" },
+        { name: "JavaScript", note: "Web development" },
+        { name: "Kotlin", note: "Android apps" },
       ],
     },
     {
-      title: "Backend",
+      title: "Frontend Development",
+      accent: "green",
       skills: [
-        { name: "Node.js", level: 85 },
-        { name: "Python", level: 80 },
-        { name: "PostgreSQL", level: 75 },
-        { name: "MongoDB", level: 70 },
-        { name: "GraphQL", level: 75 },
+        { name: "React.js", note: "Component-based UI" },
+        { name: "React Router", note: "Navigation handling" },
+        { name: "Tailwind CSS", note: "Utility-first styling" },
+        { name: "Axios", note: "API requests" },
+        { name: "HTML5", note: "Modern markup" },
+        { name: "CSS3", note: "Advanced styling" },
       ],
     },
     {
-      title: "Tools & Design",
+      title: "Backend & Databases",
+      accent: "purple",
       skills: [
-        { name: "Figma", level: 90 },
-        { name: "Adobe Creative Suite", level: 85 },
-        { name: "Git/GitHub", level: 90 },
-        { name: "Docker", level: 70 },
-        { name: "AWS", level: 75 },
+        { name: "Java (Spring Boot)", note: "REST APIs" },
+        { name: "RESTful APIs", note: "Scalable endpoints" },
+        { name: "JWT Auth", note: "Token-based security" },
+        { name: "MySQL", note: "Relational DB" },
+        { name: "PostgreSQL", note: "Advanced queries" },
+        { name: "Supabase", note: "Realtime storage" },
+      ],
+    },
+    {
+      title: "Core CS Concepts",
+      accent: "red",
+      skills: [
+        { name: "Data Structures", note: "Problem-solving" },
+        { name: "Algorithms", note: "Optimized logic" },
+        { name: "DBMS", note: "Database concepts" },
+        { name: "Operating Systems", note: "Process management" },
+        { name: "Networks", note: "Communication models" },
+        { name: "IoT", note: "Embedded systems" },
+      ],
+    },
+    {
+      title: "Tools & Platforms",
+      accent: "yellow",
+      skills: [
+        { name: "Git/GitHub", note: "Version control" },
+        { name: "VS Code", note: "Code editor" },
+        { name: "IntelliJ IDEA", note: "Java IDE" },
+        { name: "Postman", note: "API testing" },
+        { name: "Netlify/Vercel", note: "Web hosting" },
+        { name: "Figma/Canva", note: "UI/UX & design" },
       ],
     },
   ];
 
   return (
     <section id="skills" className="py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6 text-center">
         {/* Section Header */}
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
@@ -50,73 +89,33 @@ const Skills = () => {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {skillCategories.map((category, index) => (
-            <div
-              key={category.title}
-              className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-transform transform hover:scale-105"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="space-y-6">
-                <div className="text-center">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {category.title}
-                  </h3>
-                  <div className="w-12 h-1 bg-blue-500 rounded-full mx-auto"></div>
-                </div>
-
-                {/* Skills with Progress Bars */}
-                <div className="space-y-4">
-                  {category.skills.map((skill) => (
-                    <div key={skill.name} className="space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium text-gray-800">
-                          {skill.name}
-                        </span>
-                        <span className="text-xs text-gray-500">
-                          {skill.level}%
-                        </span>
-                      </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div
-                          className="bg-blue-500 h-2 rounded-full transition-all duration-1000 ease-out"
-                          style={{ width: `${skill.level}%` }}
-                        ></div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Tech Stack Icons */}
-        <div className="mt-16 text-center">
-          <h3 className="text-xl font-semibold text-gray-900 mb-8">
-            Technologies I Work With
-          </h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {[
-              "React",
-              "JavaScript",
-              "Node.js",
-              "Python",
-              "PostgreSQL",
-              "MongoDB",
-              "AWS",
-              "Docker",
-              "Figma",
-              "Tailwind CSS",
-            ].map((tech) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
+          {skillCategories.map((category, idx) => {
+            const [bgColor, textColor] = accentColors[category.accent].split(" ");
+            return (
               <div
-                key={tech}
-                className="px-4 py-2 bg-white rounded-xl shadow-md text-sm font-medium text-gray-700 hover:scale-110 transition-transform"
+                key={idx}
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-left w-full max-w-sm"
               >
-                {tech}
+                <h3 className="text-2xl font-semibold mb-6 flex items-center justify-between">
+                  {category.title}
+                  <span className={`w-12 h-1 rounded-full ${bgColor}`}></span>
+                </h3>
+
+                <ul className="space-y-4">
+                  {category.skills.map((skill, i) => (
+                    <li key={i} className="flex items-start space-x-3">
+                      <CheckCircle2 className={`${textColor} w-5 h-5 mt-1`} />
+                      <div>
+                        <p className="text-gray-800 font-medium">{skill.name}</p>
+                        <p className="text-sm text-gray-500">{skill.note}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>
