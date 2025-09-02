@@ -18,7 +18,7 @@ const Skills = () => {
         { name: "C", note: "Core programming" },
         { name: "C++", note: "OOP & STL" },
         { name: "Java", note: "Backend + DSA" },
-        { name: "Python", note: "Scripting + ML" },
+        { name: "Python", note: "Scripting" },
         { name: "JavaScript", note: "Web development" },
         { name: "Kotlin", note: "Android apps" },
       ],
