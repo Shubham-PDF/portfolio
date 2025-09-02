@@ -7,8 +7,8 @@ const Contact = () => {
         </svg>
       ),
       label: "Email",
-      value: "trickyshubham@gmail.com",
-      href: "mailto:trickyshubham@gmail.com"
+      value: "heyshubh4m@rediffmail.com",
+      href: "mailto:heyshubh4m@rediffmail.com"
     },
     {
       icon: (
@@ -31,10 +31,16 @@ const Contact = () => {
       value: "Chandigarh, India",
       href: "#"
     },
+  
     {
       icon: (
-        <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286z" />
+        <svg
+          className="w-5 h-5 sm:w-6 sm:h-6 text-black"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path d="M19 0H5C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM7 20H4V9h3v11zM5.5 7.6C4.12 7.6 3 6.48 3 5.1S4.12 2.6 5.5 2.6 8 3.72 8 5.1 6.88 7.6 5.5 7.6zM20 20h-3v-6.1c0-1.5-.5-2.5-1.7-2.5-0.9 0-1.4.6-1.7 1.2-.1.2-.1.6-.1.9V20h-3s.1-11 0-12h3v1.7c.4-.7 1.2-1.7 3-1.7 2.2 0 3.8 1.4 3.8 4.5V20z" />
         </svg>
       ),
       label: "LinkedIn",
